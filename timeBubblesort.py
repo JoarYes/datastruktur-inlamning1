@@ -29,4 +29,16 @@ stmt = f"bubble_sort({list})"
 setupcode = "from __main__ import bubble_sort"
 
 function_time = timeit.timeit(stmt=stmt, setup=setupcode, number=1)
-print(f"Function time: {function_time:.5f} seconds")
+print(f"Function time for array of length 100: {function_time:.5f} seconds")
+
+
+list = createArray(1000)
+
+function_time = timeit.timeit(stmt=stmt, setup=setupcode, number=1)
+print(f"Function time for array of length 1000: {function_time:.5f} seconds")
+
+
+list = createArray(10000)
+
+function_time = timeit.timeit(stmt=stmt, setup=setupcode, number=1)
+print(f"Function time for array of length 10000: {function_time:.5f} seconds")
