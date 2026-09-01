@@ -20,7 +20,7 @@ def bubble_sort(arr):
         if not swapped:
             break
             
-    print(arr)
+    
 
 
 list = createArray(100)
@@ -32,13 +32,15 @@ function_time = timeit.timeit(stmt=stmt, setup=setupcode, number=1)
 print(f"Function time for array of length 100: {function_time:.5f} seconds")
 
 
-list = createArray(1000)
+list1000 = createArray(1000)
+stmt = f"bubble_sort({list1000})"
 
 function_time = timeit.timeit(stmt=stmt, setup=setupcode, number=1)
 print(f"Function time for array of length 1000: {function_time:.5f} seconds")
 
 
-list = createArray(10000)
+list10000 = createArray(10000)
+stmt = f"bubble_sort({list10000})"
 
 function_time = timeit.timeit(stmt=stmt, setup=setupcode, number=1)
 print(f"Function time for array of length 10000: {function_time:.5f} seconds")
