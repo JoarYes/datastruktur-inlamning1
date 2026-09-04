@@ -9,7 +9,9 @@ def createArray(length):
 
     for i in range(length):
         swap = random.randint(0, length-1)
+        arrayS = array[swap]
 
         array[swap] = array[i]
+        array[i] = arrayS
 
     return array
